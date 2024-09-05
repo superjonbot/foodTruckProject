@@ -8,7 +8,7 @@ npm run dev
 
 The server should start on port 4000
 
-## Import the Postman Tests
+## Import the Postman Tests (in the tests folder)
 
 This would give 6 tests,
 • bad email
