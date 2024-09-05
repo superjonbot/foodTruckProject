@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "60dd7e7b-b579-430d-a445-e91d7ef01bee",
+		"name": "food cart test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2241994"
+	},
+	"item": [
+		{
+			"name": "bad email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:4000/api/locate/foodtruck?email=iamnotarealaddress@nowhere.outthere",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"locate",
+						"foodtruck"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "iamnotarealaddress@nowhere.outthere"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bad address",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:4000/api/locate/foodtruck?email=jonathanjarobles@gmail.com&address=The Moon&radius=.08",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"locate",
+						"foodtruck"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "jonathanjarobles@gmail.com"
+						},
+						{
+							"key": "address",
+							"value": "The Moon"
+						},
+						{
+							"key": "radius",
+							"value": ".08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bad radius given",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:4000/api/locate/foodtruck?email=jonathanjarobles@gmail.com&address=Jackson Playground, San Francisco, CA 94107&radius=.08",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"locate",
+						"foodtruck"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "jonathanjarobles@gmail.com"
+						},
+						{
+							"key": "address",
+							"value": "Jackson Playground, San Francisco, CA 94107"
+						},
+						{
+							"key": "radius",
+							"value": ".08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "success, one result",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:4000/api/locate/foodtruck?email=jonathanjarobles@gmail.com&address=Jackson Playground, San Francisco, CA 94107&radius=.08",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"locate",
+						"foodtruck"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "jonathanjarobles@gmail.com"
+						},
+						{
+							"key": "address",
+							"value": "Jackson Playground, San Francisco, CA 94107"
+						},
+						{
+							"key": "radius",
+							"value": ".08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "success, many results",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:4000/api/locate/foodtruck?email=jonathanjarobles@gmail.com&address=Jackson Playground, San Francisco, CA 94107&radius=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"locate",
+						"foodtruck"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "jonathanjarobles@gmail.com"
+						},
+						{
+							"key": "address",
+							"value": "Jackson Playground, San Francisco, CA 94107"
+						},
+						{
+							"key": "radius",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "too far",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:4000/api/locate/foodtruck?email=jonathanjarobles@gmail.com&address=135 Valley Rd. River Edge, NJ 07661&radius=.1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"locate",
+						"foodtruck"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "jonathanjarobles@gmail.com"
+						},
+						{
+							"key": "address",
+							"value": "135 Valley Rd. River Edge, NJ 07661"
+						},
+						{
+							"key": "radius",
+							"value": ".1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
