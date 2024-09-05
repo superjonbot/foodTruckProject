@@ -1,0 +1,7 @@
+{
+  "port": 4000,
+  "foodTruck": {
+    "csv": "./app/data/Mobile_Food_Facility_Permit.csv",
+    "geocodeAPI": "https://nominatim.openstreetmap.org/search"
+  }
+}
