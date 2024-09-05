@@ -6,7 +6,7 @@ const {
   foodTruck: { geocodeAPI },
 } = getConfig();
 
-const METERS_TO_MILES = 1609.34;
+const metersToMiles = 1609.34;
 const mileInDegrees = 69;
 
 // Geocode address to get latitude and longitude
@@ -25,7 +25,7 @@ const geocodeAddress = async (address) => {
 // Calculate distance between two coordinates in miles
 const calculateDistanceMiles = (coord1, coord2) => {
   const distanceMeters = getDistance(coord1, coord2);
-  return distanceMeters / METERS_TO_MILES;
+  return distanceMeters / metersToMiles;
 };
 
 // Get the lowest and highest latitude and longitude from jsonData

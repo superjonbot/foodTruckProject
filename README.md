@@ -1,5 +1,14 @@
 # ENGINEERING-ASSESSMENT ★ Jonathan Robles
 
+This is a node.js api to retrieve food trucks within a given area
+when it is run, it take two parameters, an address to use as the centerpoint, and a radius in miles from that point to search.
+for example :
+
+address: Jackson Playground, San Francisco, CA 94107
+radius: 1 (mile)
+
+would return all the foodtrucks within a 1 mile radius of Jackson Playground
+
 
 ## Install and start the node API
 
@@ -7,6 +16,7 @@ npm install
 npm run dev
 
 The server should start on port 4000
+
 
 ## Import the Postman Tests (in the tests folder)
 
@@ -17,7 +27,6 @@ This would give 6 tests,
 • success returning one result
 • success with many results
 • too far error
-
 
 
 ## notes to reviewers
